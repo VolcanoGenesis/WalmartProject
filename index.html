@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBasket - Eco-Friendly Shopping Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>GreenBasket</span>
+                </div>
+                <div class="user-stats">
+                    <div class="eco-points">
+                        <i class="fas fa-leaf"></i>
+                        <span id="eco-points-display">1,250</span> EcoPoints
+                    </div>
+                    <div class="user-level">
+                        <i class="fas fa-trophy"></i>
+                        <span id="user-level">Eco Warrior</span>
+                    </div>
+                </div>
+            </div>
+            <div class="level-progress">
+                <div class="progress-info">
+                    <span>Progress to Green Champion</span>
+                    <span><span id="points-to-next">750</span> points to go</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="level-progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-items">
+                <button class="nav-item active" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </button>
+                <button class="nav-item" data-page="dashboard">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-item" data-page="checkout">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Checkout</span>
+                </button>
+            </div>
+            <button class="cart-button" id="cart-toggle">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Page -->
+        <div class="page active" id="home-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Eco-Friendly Products</h1>
+                    <p>Discover sustainable alternatives and reduce your environmental impact</p>
+                </div>
+                
+                <!-- Sustainability Challenge -->
+                <div class="sustainability-challenge card">
+                    <div class="card__body">
+                        <h3><i class="fas fa-target"></i> Weekly Challenge</h3>
+                        <p>Reduce your carbon footprint by 30% this week</p>
+                        <div class="challenge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                            <span>65% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Page -->
+        <div class="page" id="dashboard-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Your Sustainability Dashboard</h1>
+                    <p>Track your eco-friendly shopping progress</p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="stat-card card">
+                        <div class="card__body">
+                            <div class="stat-icon success">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>45.6 kg</h3>
+                                <p>Carbon Footprint Saved</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card">
+                        <div class="card__body">
+                            <div class="stat-icon warning">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>8.2 kg</h3>
+                                <p>Plastic Waste Avoided</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card">
+                        <div class="card__body">
+                            <div class="stat-icon info">
+                                <i class="fas fa-shopping-basket"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>78%</h3>
+                                <p>Sustainable Choices</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card card">
+                        <div class="card__body">
+                            <div class="stat-icon primary">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>15</h3>
+                                <p>Shopping Trips</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-card card">
+                        <div class="card__body">
+                            <h3>Carbon Footprint Reduction</h3>
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1749578791/pplx_code_interpreter/7dd07851_kcpahi.jpg" alt="Carbon Footprint Reduction Chart" class="chart-image">
+                        </div>
+                    </div>
+
+                    <div class="chart-card card">
+                        <div class="card__body">
+                            <h3>Sustainable Shopping Progress</h3>
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1749578681/pplx_code_interpreter/595f6cbe_qzecjh.jpg" alt="Sustainable Shopping Progress Chart" class="chart-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leaderboard -->
+                <div class="leaderboard card">
+                    <div class="card__body">
+                        <h3><i class="fas fa-crown"></i> Eco Champions Leaderboard</h3>
+                        <div class="leaderboard-list">
+                            <div class="leaderboard-item">
+                                <span class="rank">#1</span>
+                                <span class="name">Sarah M.</span>
+                                <span class="points">2,450 pts</span>
+                            </div>
+                            <div class="leaderboard-item current">
+                                <span class="rank">#3</span>
+                                <span class="name">You</span>
+                                <span class="points">1,250 pts</span>
+                            </div>
+                            <div class="leaderboard-item">
+                                <span class="rank">#4</span>
+                                <span class="name">Mike R.</span>
+                                <span class="points">1,180 pts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Page -->
+        <div class="page" id="checkout-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Trip Summary</h1>
+                    <p>Your sustainability impact this shopping trip</p>
+                </div>
+
+                <div class="checkout-summary">
+                    <div class="impact-cards">
+                        <div class="impact-card card success">
+                            <div class="card__body">
+                                <div class="impact-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="impact-content">
+                                    <h3 id="carbon-reduction">22%</h3>
+                                    <p>Carbon footprint reduced vs. last trip</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="impact-card card warning">
+                            <div class="card__body">
+                                <div class="impact-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                                <div class="impact-content">
+                                    <h3 id="plastic-saved">1.2kg</h3>
+                                    <p>Plastic waste avoided</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="impact-card card primary">
+                            <div class="card__body">
+                                <div class="impact-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="impact-content">
+                                    <h3 id="eco-points-earned">85</h3>
+                                    <p>EcoPoints earned this trip</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="donate-section card">
+                        <div class="card__body">
+                            <h3><i class="fas fa-heart"></i> Donate Your EcoPoints</h3>
+                            <p>Convert your points to support environmental causes</p>
+                            <div class="donation-options">
+                                <button class="btn btn--secondary">
+                                    <i class="fas fa-tree"></i>
+                                    Plant Trees (50 pts)
+                                </button>
+                                <button class="btn btn--secondary">
+                                    <i class="fas fa-water"></i>
+                                    Clean Oceans (75 pts)
+                                </button>
+                                <button class="btn btn--secondary">
+                                    <i class="fas fa-paw"></i>
+                                    Wildlife Protection (100 pts)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary btn--lg btn--full-width" id="complete-checkout">
+                        <i class="fas fa-check-circle"></i>
+                        Complete Purchase
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-content">
+            <div class="cart-summary">
+                <div class="cart-stat">
+                    <span>Cart Sustainability Score:</span>
+                    <span class="sustainability-score" id="cart-sustainability-score">--</span>
+                </div>
+                <div class="cart-stat">
+                    <span>Total Carbon Footprint:</span>
+                    <span id="cart-carbon-footprint">-- kg CO₂</span>
+                </div>
+            </div>
+            
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            
+            <div class="cart-total" id="cart-total-section" style="display: none;">
+                <div class="total-line">
+                    <span>Total: $<span id="cart-total">0.00</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Suggestion Modal -->
+    <div class="modal-overlay" id="suggestion-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-lightbulb"></i> Eco-Friendly Alternative</h3>
+                <button class="close-modal" id="close-suggestion-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content" id="suggestion-content">
+                <!-- Suggestion content will be populated here -->
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn--secondary" id="reject-suggestion">Keep Original</button>
+                <button class="btn btn--primary" id="accept-suggestion">Switch to Eco Alternative</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
