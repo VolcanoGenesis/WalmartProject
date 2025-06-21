@@ -1,9 +1,0 @@
-id,name,price,category,barcode,image,sustainability_score,carbon_footprint,packaging_recyclable,organic,local_sourced,transport_distance,certifications,eco_friendly_alternative,description
-1,Organic Bananas,2.99,Produce,856749003462,https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=300&h=300&fit=crop,85,0.7,True,True,False,1200,['USDA Organic'],,"Fresh organic bananas, pesticide-free"
-2,Conventional Bananas,1.99,Produce,856749003461,https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=300&h=300&fit=crop,45,1.2,True,False,False,1200,[],1.0,Regular bananas
-3,Local Farm Eggs (Dozen),5.99,Dairy & Eggs,856749003463,https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&h=300&fit=crop,78,2.1,True,False,True,25,['Local Farm'],,Farm-fresh eggs from local farms within 25 miles
-4,Industrial Eggs (Dozen),3.99,Dairy & Eggs,856749003464,https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&h=300&fit=crop,35,4.8,False,False,False,800,[],3.0,Standard eggs from industrial farms
-5,Reusable Water Bottle,24.99,Home & Garden,856749003465,https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=300&h=300&fit=crop,92,1.5,True,False,False,500,"['BPA-Free', 'Sustainable Materials']",,"Stainless steel reusable water bottle, BPA-free"
-6,Disposable Water Bottles (24-pack),8.99,Beverages,856749003466,https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?w=300&h=300&fit=crop,15,12.4,True,False,False,300,[],5.0,Single-use plastic water bottles
-7,Bamboo Toothbrush,4.99,Health & Beauty,856749003467,https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=300&h=300&fit=crop,88,0.3,True,False,False,200,"['Biodegradable', 'Sustainable Materials']",,Eco-friendly bamboo toothbrush with biodegradable bristles
-8,Plastic Toothbrush,2.99,Health & Beauty,856749003468,https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=300&h=300&fit=crop,25,2.1,False,False,False,400,[],7.0,Standard plastic toothbrush
